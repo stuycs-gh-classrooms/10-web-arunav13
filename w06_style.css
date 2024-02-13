@@ -1,0 +1,19 @@
+h1 {
+  color: blue;
+}
+body {
+  background-color: black;
+  text-align: justify;
+}
+image {
+  width: 75%px;
+  height: 75%px;
+}
+ul {
+  font-size: 24px;
+  font-weight: bold;
+  border: solid;
+}
+li {
+  font-family: "Times";
+}
