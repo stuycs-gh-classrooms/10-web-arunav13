@@ -1,3 +1,25 @@
+nav {
+  border-bottom: 1px solid black;
+}
+
+.crumbs ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.crumb {
+  display: inline-block;
+}
+
+.crumb a::after {
+  display: inline-block;
+  color: #000;
+  content: '>';
+  font-size: 80%;
+  font-weight: bold;
+  padding: 0 3px;
+}
+
 h1 {
   color: blue;
 }
@@ -8,7 +30,6 @@ body {
 }
 
 img {
-  float: right;
   margin: 10px;
 }
 
@@ -19,37 +40,68 @@ body {
 
 div {
   border: solid;
-  margin: auto;
-  padding: 20px;
+  padding: 25px;
+  margin:auto
   vertical-align: text-top;
 
   }
 
 .category1
 { width: 1000px;
-height: 175px;
+  margin: auto;
+height: 60px;
+}
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  width: 300px
 }
 
 .category2
 { width: 1000px;
+  margin: auto;
 height: 175px;
 
 }
 
 .category3
 { width: 1000px;
-height: 80px;
-
+  margin: auto;
+height: 80px
 }
 
 .category4
 { width: 1000px;
-height: 240px;
+  margin: auto;
+height: 155px;
 }
 
+.category6
+{ height: 300px
+
+
+  }
+
+
+.category8
+{ width: 690px;
+  margin-left: }
+
+  .category9
+  { width: 690px;
+    margin-left: }
+
 .fit-picture
-{  display: block;
-  margin-left: auto;
-  width: 50%;
+  {  .position: absolute;
+    top: 10px;
+    left: 350px;
+ }
+
+.Bones {
+  display: block;
+  margin: 0 auto;
+  width: 1000px;
 }
