@@ -11,5 +11,6 @@ image {
   float: right;
 }
 
-
-</body>
+p {
+  font-size: 14px;
+}
