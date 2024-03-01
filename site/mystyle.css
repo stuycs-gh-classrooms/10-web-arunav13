@@ -1,5 +1,7 @@
 nav {
   border-bottom: 1px solid black;
+  width: 100%;
+  height: auto;
 }
 
 .navitem {
@@ -11,21 +13,23 @@ nav {
   display: block;
   color: white;
   text-align: center;
-    padding: 14px 125px;
+
   text-decoration: none;
+
 }
 
 .navitem-current
 {
   list-style-type: none;
   margin: 0px;
-  overflow: hidden;
+
   background-color: aliceblue;
   float: left;
   display: block;
   text-align: center;
-    padding: 14px 90px;
   text-decoration: none;
+
+
 }
 
 
