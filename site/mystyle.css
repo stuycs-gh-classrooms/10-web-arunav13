@@ -2,23 +2,32 @@ nav {
   border-bottom: 1px solid black;
 }
 
-.crumbs ol {
+.navitem {
   list-style-type: none;
-  padding-left: 0;
+  margin: 0px;
+  overflow: hidden;
+  background-color: darkgrey;
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+    padding: 14px 90px;
+  text-decoration: none;
 }
 
-.crumb {
-  display: inline-block;
+.navitem-current
+{
+  list-style-type: none;
+  margin: 0px;
+  overflow: hidden;
+  background-color: aliceblue;
+  float: left;
+  display: block;
+  text-align: center;
+    padding: 14px 90px;
+  text-decoration: none;
 }
 
-.crumb a::after {
-  display: inline-block;
-  color: #000;
-  content: '>';
-  font-size: 80%;
-  font-weight: bold;
-  padding: 0 3px;
-}
 
 h1 {
   color: blue;
@@ -27,16 +36,13 @@ body {
   background-color: #faebd7;
   text-align: justify;
   font-family: "Times";
+  font-size: 20px;
 }
 
 img {
   margin: 10px;
 }
 
-
-body {
-  font-size: 20px;
-}
 
 div {
   border: solid;
@@ -106,10 +112,6 @@ margin: auto;
   margin-top: 35px;
   width: 1000px;
 }
-
-
-
-
 
 .fit-picture
 {
