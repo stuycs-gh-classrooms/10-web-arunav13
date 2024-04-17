@@ -1,8 +1,21 @@
 h1 {
+  color: red;
+  text-align: center;
+}
+
+h2 {
+  color: green;
+  border: solid;
+  text-align: center;
+}
+
+
+h3 {
   color: blue;
 }
+
+
 body {
   background-color: #faebd7;
-  text-align: justify;
   font-family: "Times";
 }
