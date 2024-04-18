@@ -9,68 +9,144 @@
 <h2> Koch Curve </h2>
 <h3> Basic Curve: kotch_curve(t, 4, 15)  </h3>
 <img
- src="images/Kotch.png"
+class="basic"
+ src="Images/Kotch.png"
   alt="Kotch Basic" />
 
 
 <h3> Modified Curve draw_kotch(leonardo, 5, 15)</h3>
-<div
   <ul>
   <li> Modification 1: Using random colors at every segment drawn by the turtle  </li>
   <li> Modification 2: Changing angles, such that a kotch_curve is formed through
    20 degree left rotations, instead of 60 degree rotations.</li>
   </ul>
-    </div>
 
-
+<div class="container">
   <img
-   src="images/kotchmod.png"
+   class="mod"
+   src="Images/kotchmod.png"
     alt="Kotch Mod" />
 
-
-
+    <pre>
+      <code> def draw_sierpinski(t, depth, length):
+        num = 0
+        if depth == 1:
+            t.pd()
+            triangle(t, length)
+        else:
+            t.pensize(2)
+            draw_sierpinski(t, depth - 1, length * 2)
+            t.pu()
+            t.fd(length * 2)
+            draw_sierpinski(t, depth - 1, length * 2)
+            t.pu()
+            t.bk(length * 2)
+            t.lt(60)
+            t.fd(length * 2)
+            t.rt(60)
+            t.pensize(1)
+            draw_sierpinski(t, depth - 1, length * 2)
+            t.lt(60)
+            t.bk(length * 2)
+            t.rt(60)
+          </code>
+        </pre>
+        </div>
 
 <h2> Sierpinski Triangle </h2>
 <h3> Basic Sierpinski Triangle: draw_sierpinski(t, 4, 100) </h3>
 <img
- src="images/Sierpinski.png"
+class="basic"
+ src="Images/Sierpinski.png"
   alt="Sierpinski Basic" />
 
 
 <h3> Modified Sierpinski: draw_sierpinski(t, 3, 5) </h3>
-<div
 <ul>
 <li> Modification 1: The pensize will be twice as thick for the bottom two Sierpinskis. </li>
 <li> Modification 2: Instead of dividing by 2, the length of the Sierpinski will double
 to form the next depth </li>
 </ul>
-</div>
 
 
 <img
- src="images/sierpinskimod.png"
+  class="mod"
+ src="Images/sierpinskimod.png"
   alt="Sierpinski Modified" />
+
+  <pre>
+  <code>
+  def draw_sierpinski(t, depth, length):
+      num = 0
+      if depth == 1:
+          t.pd()
+          triangle(t, length)
+      else:
+          t.pensize(2)
+          draw_sierpinski(t, depth - 1, length * 2)
+          t.pu()
+          t.fd(length * 2)
+          draw_sierpinski(t, depth - 1, length * 2)
+          t.pu()
+          t.bk(length * 2)
+          t.lt(60)
+          t.fd(length * 2)
+          t.rt(60)
+          t.pensize(1)
+          draw_sierpinski(t, depth - 1, length * 2)
+          t.lt(60)
+          t.bk(length * 2)
+          t.rt(60)
+  </code>
+  </pre>
 
 
 <h2> Trees </h2>
 <h3> Basic Tree: tree(t, 4, 15, 20) </h3>
 <img
- src="images/Tree.png"
+  class="basic"
+ src="Images/Tree.png"
   alt="Tree Basic" />
 
 
+
 <h3> Modified Tree: tree(t, 7, 15, 20) </h3>
-<div
 <ul>
 <li> Modification 1: The width of the tree (excluding the root) is random from 0-4
 </li>
 <li> Modification 2: The bottom of the tree is brown, while the uppermost additions are green. </li>
 </ul>
-</div>
+
 
 <img
- src="images/treemod.png"
+class="mod"
+ src="Images/treemod.png"
   alt="Tree Modified" />
+
+  <pre>
+  <code>
+  def tree(t, depth, length, angle):
+      if depth == 1:
+          t.fd(length)
+          t.bk(length)
+      else:
+          t.pensize(5)
+          t.color("brown")
+          tree(t, depth / depth, length, angle)
+          t.fd(length)
+          t.lt(angle)
+          r = random.randrange(4)
+          t.pensize(r)
+          t.color("green")
+          tree(t, depth - 1, length, angle)
+          t.rt(angle * 2)
+          tree(t, depth - 1, length, angle)
+          t.pensize(r)
+          t.color("brown")
+          t.lt(angle)
+          t.bk(length)
+      </code>
+      </pre>
 
 
 

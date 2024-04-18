@@ -22,21 +22,25 @@ body {
 }
 
 
-img {
+.basic {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 25%;
 }
 
+.img
+{
+ width: 50%;
+  float: right;
+
+}
 
 
 div {
+  margin-left: 27%;
+  margin-right: 25%;
   border: solid;
-  padding-top:2%;
   padding-bottom:2%;
-  padding-left:2%;
-  padding-right:2%;
   margin-bottom: 2%;
-  text-align: center;
-  }
+    }
