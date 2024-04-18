@@ -27,7 +27,7 @@
     alt="Kotch Mod" />
   <pre>
   <code>
-  def draw_kotch(t, depth, length):
+def draw_kotch(t, depth, length):
     r = random.randrange(255)
     g = random.randrange(255)
     b = random.randrange(255)
@@ -73,7 +73,7 @@ to form the next depth </li>
 
   <pre>
   <code>
-  def draw_sierpinski(t, depth, length):
+def draw_sierpinski(t, depth, length):
     num = 0
     if depth == 1:
         t.pd()
@@ -106,14 +106,16 @@ to form the next depth </li>
 
 
 
-<h3> Modified Tree: tree(t, 7, 15, 20) </h3>
+<h3> Modified Tree: tree(t, 6, 15, 20) </h3>
 <div
 <ul>
-<li> Modification 1: The width of the tree (excluding the root) is random from 0-4
+<li> Modification 1: The pen size has a thicker value at the root and a thinner value at the branches.
 </li>
-<li> Modification 2: The bottom of the tree is brown, while the uppermost additions are green. </li>
+<li> Modification 2: The length varies as the branches are both divided and multipled by a random value from 1 to 3
+</li>
 </ul>
 </div>
+
 
 
 <img
@@ -122,26 +124,25 @@ to form the next depth </li>
 
   <pre>
   <code>
-  def tree(t, depth, length, angle):
-      if depth == 1:
-          t.fd(length)
-          t.bk(length)
-      else:
-          t.pensize(5)
-          t.color("brown")
-          tree(t, depth / depth, length, angle)
-          t.fd(length)
-          t.lt(angle)
-          r = random.randrange(4)
-          t.pensize(r)
-          t.color("green")
-          tree(t, depth - 1, length, angle)
-          t.rt(angle * 2)
-          tree(t, depth - 1, length, angle)
-          t.pensize(r)
-          t.color("brown")
-          t.lt(angle)
-          t.bk(length)
+def tree(t, depth, length, angle):
+    v = random.randrange(3) + 1
+    if depth == 1:
+        t.fd(length)
+        t.bk(length)
+    else:
+        t.pensize(2)
+        tree(t, depth / depth, length, angle)
+        t.fd(length)
+        t.lt(angle)
+        t.pensize(1)
+        tree(t, depth - 1, length / v, angle)
+        t.rt(angle * 2)
+        tree(t, depth - 1, length * v, angle)
+        t.pensize(2)
+        t.lt(angle)
+        t.bk(length)
+
+
       </code>
       </pre>
 
