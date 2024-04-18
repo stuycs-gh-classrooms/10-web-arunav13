@@ -12,6 +12,7 @@ h2 {
 
 h3 {
   color: blue;
+  text-align: center;
 }
 
 
@@ -27,3 +28,15 @@ img {
   margin-right: auto;
   width: 25%;
 }
+
+
+
+div {
+  border: solid;
+  padding-top:2%;
+  padding-bottom:2%;
+  padding-left:2%;
+  padding-right:2%;
+  margin-bottom: 2%;
+  text-align: center;
+  }
