@@ -34,6 +34,6 @@ html= HTML_HEADER
 html+= '<body style="background-color: '
 html+= bgcolor + ';">'
 html+= '<h1>Hello ' + name + '</h1>'
-html+= '<br><a href="form.html">Try Again</a>'
+html+= '<br><a href="final_project/form.html">Try Again</a>'
 html+= HTML_FOOTER
 print(html)
