@@ -22,8 +22,10 @@ HTML_FOOTER = """
 """
 
 
+
+
 data = cgi.FieldStorage()
-name = 'batman'
+name = 'hi'
 if ('name' in data):
     name = data['name'].value
 bgcolor = 'DarkSeaGreen'
@@ -32,8 +34,8 @@ if ('bgcolor' in data):
 
 html= HTML_HEADER
 html+= '<body style="background-color: '
+html+= '<h1>' + name + '</h1>'
 html+= bgcolor + ';">'
-html+= '<h1>Hello ' + name + '</h1>'
 html+= '<br><a href="final_project/form.html">Try Again</a>'
 html+= HTML_FOOTER
 print(html)
