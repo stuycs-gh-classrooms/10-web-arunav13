@@ -1,3 +1,4 @@
+
 #!/usr/bin/python
 print('Content-type: text/html\n')
 
@@ -22,10 +23,8 @@ HTML_FOOTER = """
 """
 
 
-
-
 data = cgi.FieldStorage()
-name = 'hi'
+name = 'batman'
 if ('name' in data):
     name = data['name'].value
 bgcolor = 'DarkSeaGreen'
@@ -34,8 +33,8 @@ if ('bgcolor' in data):
 
 html= HTML_HEADER
 html+= '<body style="background-color: '
-html+= '<h1>' + name + '</h1>'
 html+= bgcolor + ';">'
-html+= '<br><a href="final_project/form.html">Try Again</a>'
+html+= '<h1>Hello ' + name + '</h1>'
+html+= '<br><a href="hello.html">Try Again</a>'
 html+= HTML_FOOTER
 print(html)
