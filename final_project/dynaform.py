@@ -52,7 +52,7 @@ def make_form(question_num, radio_options):
 
 body = '<h1> Pick your own adventure! </h2>'
 question_bank = {
-    '1': ["It’s midnight on a Saturday night. The sound of the wind whistling echoes through your ears. Suddenly, you hear a knock on the door. You’re unsure of whether to answer it. What do you do?", 'Definitely answer it', 'Run away'], 
+    '1': ["It’s midnight on a Saturday night. The sound of the wind whistling echoes through your ears. Suddenly, you hear a knock on the door. You’re unsure of whether to answer it. What do you do?", 'Definitely answer it', 'Run away'],
     '1a': ['The door opens and you see a policeman. “We will need you to come with us,” he says. Suddenly, you remember you have a bottle of pepper spray in your hand. What do you do?', 'Use it', 'Save it for later'],
     '1b': ['You run away and race down the block. Suddenly, you receive a call from a colleague. “Are the police there? Look, you need to escape. They realized you are responsible for the theft of the diamond. But, remember, we still need to steal the crimson diamond from the Museum of Sciences. Go to the location as quickly as possible and return to the headquarters.','Use the subway station a mile away', 'Use the loud helicopter a block away'],
     '1aa': ['You aim the pepper spray at the policeman. The policeman struggles to see, but uses his walkie-talkie to dial his colleague. What do you do?', 'Panic, sprint and run away' , 'Wait to see if you receive important info'],
@@ -73,6 +73,7 @@ question_bank = {
 
 
 data = cgi.FieldStorage()
+html = make_html('Pick your adventure', 'Question')
 if (len(data) == 0):
     question_num = '1'
 else:
