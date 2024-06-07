@@ -80,11 +80,17 @@ if (len(data) == 0):
     question_num = '1'
 else:
     question_num = data['question'].value
-    question_num += data['choice'].value
+    choice_num = data['choice'].value
+    if question_num in ['1bba' , '1aabba' , '1aabbc', '1aabbb' , '1bbb' '1ba' ,'1aaa' , '1aba'] and choice_num == 'a':
+        question_num = '1'
+    else:
+        question_num += choice_num
+
 
 list = question_bank[question_num]
 question = list[0]
 choices = list[1:]
+
 html += make_question(question)
 if choices != []:
     html += make_form(question_num, choices)
