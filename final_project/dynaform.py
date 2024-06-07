@@ -58,19 +58,19 @@ question_bank = {
     '1b': ['You run away and race down the block. Suddenly, you receive a call from a colleague. “Are the police there? Look, you need to escape. They realized you are responsible for the theft of the diamond. But, remember, we still need to steal the crimson diamond from the Museum of Sciences. Go to the location as quickly as possible and return to the headquarters.','Use the subway station a mile away', 'Use the loud helicopter a block away'],
     '1aa': ['You aim the pepper spray at the policeman. The policeman struggles to see, but uses his walkie-talkie to dial his colleague. What do you do?', 'Panic, sprint and run away' , 'Wait to see if you receive important info'],
     '1ab': ['As you wait cautiously, you receive a call from your phone. “Sorry, got to take this,” you say to the policemen. The phone answers: “Are the police there? Look, you need to escape. They realized you are responsible for the theft of the diamond. But, remember, we still need to steal the crimson diamond from the Museum of Sciences. Go to the location as quickly as possible and return to the headquarters.', 'Use the subway station a mile away', 'Use the loud helicopter a block away'],
-    '1aba': ['The train station is a mile away and you sprint to the station. A few blocks away, you hear sirens in the background. The police are behind you and you’ve been caught. Game over'],
+    '1aba': ['The train station is a mile away and you sprint to the station. A few blocks away, you hear sirens in the background. The police are behind you and you’ve been caught. Game over' , 'Play Again'],
     '1aab': ['As you wait cautiously, you receive a call from your phone. “Sorry, got to take this,” you say to the policemen. The phone answers: “Are the police there? Look, you need to escape. They realized you are responsible for the theft of the diamond. But, remember, we still need to steal the crimson diamond from the Museum of Sciences. Go to the location as quickly as possible and return to the headquarters.', 'Use the subway station a mile away', 'Use the loud helicopter a block away'],
     '1aaa': ['You run several blocks until you hear sirens from the police cars in the distance. You have been caught. Game over.'],
-    '1ba': ['The train station is a mile away and you sprint to the station. A few blocks away, you hear sirens in the background. The police are behind you and you’ve been caught. Game over'],
-    '1aaba': ['The train station is a mile away and you sprint to the station. A few blocks away, you hear sirens in the background. The police are behind you and you’ve been caught. Game over'],
+    '1ba': ['The train station is a mile away and you sprint to the station. A few blocks away, you hear sirens in the background. The police are behind you and you’ve been caught. Game over' , 'Play Again'],
+    '1aaba': ['The train station is a mile away and you sprint to the station. A few blocks away, you hear sirens in the background. The police are behind you and you’ve been caught. Game over' , 'Play Again'],
     '1bb': ['The helicopter is a block away and you can hear sirens in the background. Just in the nick of time, you enter the helicopter. You know the police are onto you, but you’re relieved you’re safe. You keep traveling until you reach and enter the Museum. The diamond is right in front of you. You reach out. Then, you hear “STOP. Stand where you are!” What do you do next?', 'Surrender and accept defeat' , 'Use the pepper spray' , 'Sprint into the darkness'],
     '1aabb': ['The helicopter is a block away and you can hear sirens in the background. Just in the nick of time, you enter the helicopter. You know the police are onto you, but you’re relieved you’re safe. You keep traveling until you reach and enter the Museum. The diamond is right in front of you. You reach out. Then, you hear “STOP. Stand where you are!” What do you do next?', 'Surrender and accept defeat' , 'Use the pepper spray' , 'Sprint into the darkness'],
-    '1bbb': ['You use the pepper spray to delay the intruder, grab the diamond, and leave. You enter the helicopter and you are safe with the retrieved diamond. You have won'],
-    '1aabbb': ['You use the pepper spray to delay the intruder, grab the diamond, and leave. You enter the helicopter and you are safe with the retrieved diamond. You have won'],
-    '1bba': ['Game Over'],
-    '1aabba': ['Game Over'],
-    '1bbc': ['You manage to escape safely, but you have not retrieved the diamond. The End.'],
-    '1aabbc': ['You manage to escape safely, but you have not retrieved the diamond. The End.']
+    '1bbb': ['You use the pepper spray to delay the intruder, grab the diamond, and leave. You enter the helicopter and you are safe with the retrieved diamond. You have won' , 'Play Again'],
+    '1aabbb': ['You use the pepper spray to delay the intruder, grab the diamond, and leave. You enter the helicopter and you are safe with the retrieved diamond. You have won' , 'Play Again'],
+    '1bba': ['Game Over' , 'Play Again'],
+    '1aabba': ['Game Over' , 'Play Again'],
+    '1bbc': ['You manage to escape safely, but you have not retrieved the diamond. The End.' , 'Play Again'],
+    '1aabbc': ['You manage to escape safely, but you have not retrieved the diamond. The End.' , 'Play Again']
 }
 
 
