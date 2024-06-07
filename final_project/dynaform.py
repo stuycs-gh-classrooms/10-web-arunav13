@@ -60,7 +60,7 @@ question_bank = {
     '1ab': ['As you wait cautiously, you receive a call from your phone. “Sorry, got to take this,” you say to the policemen. The phone answers: “Are the police there? Look, you need to escape. They realized you are responsible for the theft of the diamond. But, remember, we still need to steal the crimson diamond from the Museum of Sciences. Go to the location as quickly as possible and return to the headquarters.', 'Use the subway station a mile away', 'Use the loud helicopter a block away'],
     '1aba': ['The train station is a mile away and you sprint to the station. A few blocks away, you hear sirens in the background. The police are behind you and you’ve been caught. Game over' , 'Play Again'],
     '1aab': ['As you wait cautiously, you receive a call from your phone. “Sorry, got to take this,” you say to the policemen. The phone answers: “Are the police there? Look, you need to escape. They realized you are responsible for the theft of the diamond. But, remember, we still need to steal the crimson diamond from the Museum of Sciences. Go to the location as quickly as possible and return to the headquarters.', 'Use the subway station a mile away', 'Use the loud helicopter a block away'],
-    '1aaa': ['You run several blocks until you hear sirens from the police cars in the distance. You have been caught. Game over.'],
+    '1aaa': ['You run several blocks until you hear sirens from the police cars in the distance. You have been caught. Game over.' , 'Play Again'],
     '1abb' : ['The helicopter is a block away and you can hear sirens in the background. Just in the nick of time, you enter the helicopter. You know the police are onto you, but you’re relieved you’re safe. You keep traveling until you reach and enter the Museum. The diamond is right in front of you. You reach out. Then, you hear “STOP. Stand where you are!” What do you do next?', 'Surrender and accept defeat' , 'Use the pepper spray' , 'Sprint into the darkness'],
     '1ba': ['The train station is a mile away and you sprint to the station. A few blocks away, you hear sirens in the background. The police are behind you and you’ve been caught. Game over' , 'Play Again'],
     '1aaba': ['The train station is a mile away and you sprint to the station. A few blocks away, you hear sirens in the background. The police are behind you and you’ve been caught. Game over' , 'Play Again'],
@@ -82,7 +82,7 @@ if (len(data) == 0):
 else:
     question_num = data['question'].value
     choice_num = data['choice'].value
-    if question_num in ['1bba' , '1aabba' , '1aabbc', '1aabbb' , '1bbb' '1ba' ,'1aaa' , '1aba'] and choice_num == 'a':
+    if question_num in ['1bba' , '1aabba' , '1bba' , '1aabbc', '1aabbb' , '1bbb' '1ba' ,'1aaa' , '1aba'] and choice_num == 'a':
         question_num = '1'
     else:
         question_num += choice_num
