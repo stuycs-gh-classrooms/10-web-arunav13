@@ -82,7 +82,7 @@ if (len(data) == 0):
 else:
     question_num = data['question'].value
     choice_num = data['choice'].value
-    if question_num in ['1bba' , '1aabba' , '1aabbc', '1aabbb' , '1bbb' '1ba' ,'1aaa' , '1aba' , '1aaba' , '1bbc'] and choice_num == 'a':
+    if question_num in ['1bba' , '1aabba' , '1aabbc', '1aabbb' , '1bbb' , '1ba' ,'1aaa' , '1aba' , '1aaba' , '1bbc'] and choice_num == 'a':
         question_num = '1'
     else:
         question_num += choice_num
