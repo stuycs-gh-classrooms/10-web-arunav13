@@ -78,8 +78,9 @@ html = make_html('Pick your adventure', 'Question')
 if (len(data) == 0):
     question_num = '1'
 else:
-    question_num = data['question']
-    question_num += data['choice']
+    html += str(data)
+    question_num = data[question]
+    question_num += data[choice]
 
 list = question_bank[question_num]
 question = list[0]
