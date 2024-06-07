@@ -74,7 +74,7 @@ question_bank = {
 
 
 data = cgi.FieldStorage()
-html = make_html('Pick your adventure', 'Question')
+html = make_html('Pick your adventure', 'Pick your adventure')
 if (len(data) == 0):
     question_num = '1'
 else:
