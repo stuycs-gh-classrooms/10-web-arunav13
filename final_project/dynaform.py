@@ -61,7 +61,7 @@ question_bank = {
     '1aab': ['As you wait cautiously, you receive a call from your phone. “Sorry, got to take this,” you say to the policemen. The phone answers: “Are the police there? Look, you need to escape. They realized you are responsible for the theft of the diamond. But, remember, we still need to steal the crimson diamond from the Museum of Sciences. Go to the location as quickly as possible and return to the headquarters.', 'Use the subway station a mile away', 'Use the loud helicopter a block away'],
     '1aaa': ['You run several blocks until you hear sirens from the police cars in the distance. You have been caught. Game over.'],
     '1ba': ['The train station is a mile away and you sprint to the station. A few blocks away, you hear sirens in the background. The police are behind you and you’ve been caught. Game over'],
-    '1aaba': ['The train station is a mile away and you sprint to the station. A few blocks away, you hear sirens in the background. The police are behind you and you’ve been caught.' , 'Game over'],
+    '1aaba': ['The train station is a mile away and you sprint to the station. A few blocks away, you hear sirens in the background. The police are behind you and you’ve been caught. Game over'],
     '1bb': ['The helicopter is a block away and you can hear sirens in the background. Just in the nick of time, you enter the helicopter. You know the police are onto you, but you’re relieved you’re safe. You keep traveling until you reach and enter the Museum. The diamond is right in front of you. You reach out. Then, you hear “STOP. Stand where you are!” What do you do next?', 'Surrender and accept defeat' , 'Use the pepper spray' , 'Sprint into the darkness'],
     '1aabb': ['The helicopter is a block away and you can hear sirens in the background. Just in the nick of time, you enter the helicopter. You know the police are onto you, but you’re relieved you’re safe. You keep traveling until you reach and enter the Museum. The diamond is right in front of you. You reach out. Then, you hear “STOP. Stand where you are!” What do you do next?', 'Surrender and accept defeat' , 'Use the pepper spray' , 'Sprint into the darkness'],
     '1bbb': ['You use the pepper spray to delay the intruder, grab the diamond, and leave. You enter the helicopter and you are safe with the retrieved diamond. You have won'],
@@ -78,7 +78,6 @@ html = make_html('Pick your adventure', 'Question')
 if (len(data) == 0):
     question_num = '1'
 else:
-    html += str(data)
     question_num = data['question'].value
     question_num += data['choice'].value
 
@@ -86,7 +85,8 @@ list = question_bank[question_num]
 question = list[0]
 choices = list[1:]
 html += make_question(question)
-html += make_form(question_num, choices)
+if choices != []:
+    html += make_form(question_num, choices)
 print(html)
 
 # name = 'batman'
