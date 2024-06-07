@@ -93,8 +93,6 @@ question = list[0]
 choices = list[1:]
 
 html += make_question(question)
-if choices != []:
-    html += make_form(question_num, choices)
 print(html)
 
 # name = 'batman'
