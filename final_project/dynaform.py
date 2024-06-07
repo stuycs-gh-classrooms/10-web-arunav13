@@ -72,7 +72,7 @@ question_bank = {
     '1aabba': ['Game Over' , 'Play Again'],
     '1bbc': ['You manage to escape safely, but you have not retrieved the diamond. The End.' , 'Play Again'],
     '1aabbc': ['You manage to escape safely, but you have not retrieved the diamond. The End.' , 'Play Again'],
-    '1abba' : [['Game Over' , 'Play Again']
+    '1abba' : ['Game Over' , 'Play Again']
 }
 
 
