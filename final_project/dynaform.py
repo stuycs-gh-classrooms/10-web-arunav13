@@ -79,8 +79,8 @@ if (len(data) == 0):
     question_num = '1'
 else:
     html += str(data)
-    question_num = data['question']
-    question_num += data['choice']
+    question_num = data['question'].value
+    question_num += data['choice'].value
 
 list = question_bank[question_num]
 question = list[0]
