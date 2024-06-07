@@ -21,7 +21,7 @@ def make_html(title, body):
 
 
 def make_question(question):
-    html += '<h3>'
+    html = '<h3>'
     html += question
     html += '</h3>'
     return html
@@ -84,8 +84,8 @@ else:
 list = question_bank[question_num]
 question = list[0]
 choices = list[1:]
-make_question(question)
-make_form(question_num, choices)
+html += make_question(question)
+html += make_form(question_num, choices)
 print(html)
 
 # name = 'batman'
