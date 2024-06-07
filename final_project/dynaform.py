@@ -34,7 +34,7 @@ def make_form(question_num, radio_options):
     html += '<input type="hidden" name="question" value="' + question_num + '">'
 
     for option in radio_options:
-        x = radio_options.find(option)
+        x = radio_options.index(option)
         if x == 0:
             name = 'a'
         elif x == 1:
