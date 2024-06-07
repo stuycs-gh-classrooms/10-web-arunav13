@@ -24,6 +24,7 @@ def make_question(question):
     html += '<h3>'
     html += question
     html += '</h3>'
+    return html
 
 
 def make_form(question_num, radio_options):
