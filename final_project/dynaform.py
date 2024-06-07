@@ -30,7 +30,7 @@ def make_question(question):
 def make_form(question_num, radio_options):
     # html = """
     radio = ''
-    html += '<form action="dynaform.py" method="GET">'
+    html = '<form action="dynaform.py" method="GET">'
     html += '<input type="hidden" name="question" value="' + question_num + '">'
 
     for option in radio_options:
