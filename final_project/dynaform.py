@@ -82,7 +82,7 @@ if (len(data) == 0):
 else:
     question_num = data['question'].value
     choice_num = data['choice'].value
-    if question_num in ['1bba' , '1bbc' '1aabba' , '1bba' , '1aaba' '1aabbc', '1aabbb' , '1bbb' '1ba' ,'1aaa' , '1aba'] and choice_num == 'a':
+    if question_num in ['1bba' , '1aabba' , '1bba' , '1aab' '1aabbc', '1aabbb' , '1bbb' '1ba' ,'1aaa' , '1aba'] and choice_num == 'a':
         question_num = '1'
     else:
         question_num += choice_num
@@ -93,6 +93,8 @@ question = list[0]
 choices = list[1:]
 
 html += make_question(question)
+if choices != []:
+    html += make_form(question_num, choices)
 print(html)
 
 # name = 'batman'
