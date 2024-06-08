@@ -71,8 +71,7 @@ question_bank = {
     '1abba' : ['Game Over' , 'Play Again']
 }
 
-images =
-{ '1': image0.webp,
+images = { '1': image0.webp,
   '1a': image1.jpg,
   '1b': image2.webp,
   '1aa': image1.jpg,
