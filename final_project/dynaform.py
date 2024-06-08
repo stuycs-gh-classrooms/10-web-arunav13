@@ -5,7 +5,7 @@ cgitb.enable() #These 2 lines will allow error messages to appear on a web page 
 
 import cgi
 
-def make_html(title, body):
+def make_html(title):
     html = """
     <!DOCTYPE html>
     <html lang="en">
@@ -14,8 +14,6 @@ def make_html(title, body):
     <meta charset="utf-8">
     """
     html+= '<title>' + title + '</title></head>'
-    html+= '<body>' + body + '</body>'
-    html+= '</body></html>'
     return html
 
 
@@ -46,11 +44,10 @@ def make_form(question_num, radio_options):
         radio += iput
 
     html += radio
-    html += '<input type="submit" value="Submit!">'
+    html += '<input type="submit" value="Submit!"></form>'
     return html
 
 
-body = '<h1> Pick your own adventure! </h2>'
 question_bank = {
     '1': ["It’s midnight on a Saturday night. The sound of the wind whistling echoes through your ears. Suddenly, you hear a knock on the door. You’re unsure of whether to answer it. What do you do?", 'Definitely answer it', 'Run away'],
     '1a': ['The door opens and you see a policeman. “We will need you to come with us,” he says. Suddenly, you remember you have a bottle of pepper spray in your hand. What do you do?', 'Use it', 'Save it for later'],
@@ -74,25 +71,53 @@ question_bank = {
     '1abba' : ['Game Over' , 'Play Again']
 }
 
+images =
+{ '1': image0.webp,
+  '1a': image1.jpg,
+  '1b': image2.webp,
+  '1aa': image1.jpg,
+  '1ab': image2.webp,
+  '1aba': image3.jpg,
+  '1aab': image2.webp,
+  '1aaa': image3.jpg,
+  '1abb': image4.jpg,
+  '1ba' : image3.jpg,
+  '1aaba': image3.jpg,
+  '1bb': image4.jpg,
+  '1aabb': image4.jpg,
+  '1bbb': image5.jpg,
+  '1aabbb': image5.jpg
+  '1bba': image3.jpg,
+  '1aabba': image3.jpg,
+  '1bbc': image6.jpg,
+  '1aabbc': image6.jpg,
+  '1abba': image3.jpg
+}
+
+body += '<body background=""><h1> Pick your own adventure! </h1>'
 
 data = cgi.FieldStorage()
-html = make_html('Pick your adventure', 'Pick your adventure')
+html = make_html('Pick your adventure')
 if (len(data) == 0):
     question_num = '1'
 else:
     question_num = data['question'].value
     choice_num = data['choice'].value
+    image_num = images[question_num]
     if question_num in ['1bba' , '1aabba' ,  '1aabbc', '1aabbb' , '1bbb' , '1ba' ,'1aaa' , '1aba' , '1aaba' , '1bbc' , '1abba'] and choice_num == 'a':
         question_num = '1'
     else:
         question_num += choice_num
 
+body_open = '<body background=' + image_num + '> <h1> Pick your own adventure! </h1>'
+html += body_open
 
 list = question_bank[question_num]
 question = list[0]
 choices = list[1:]
 
 html += make_question(question)
-if choices != []:
-    html += make_form(question_num, choices)
+html += make_form(question_num, choices)
+html += '</body></html>'
+
 print(html)
