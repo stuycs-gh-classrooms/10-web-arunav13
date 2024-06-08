@@ -1,17 +1,12 @@
 #!/usr/bin/python
 print('Content-type: text/html\n')
-html += '<head>'
-html += '<link href="form.css" rel="stylesheet">'
-html += '</head>'
-print(html)
-
 import cgitb #
 cgitb.enable() #These 2 lines will allow error messages to appear on a web page in the browser
 
 import cgi
 
 def make_html(title, body):
-    html += """
+    html = """
     <!DOCTYPE html>
     <html lang="en">
 
@@ -101,17 +96,3 @@ html += make_question(question)
 if choices != []:
     html += make_form(question_num, choices)
 print(html)
-
-# name = 'batman'
-# if ('name' in data):
-#     name = data['name'].value
-#     bgcolor = 'DarkSeaGreen'
-#     if ('bgcolor' in data):
-#         bgcolor = data['bgcolor'].value
-#     body = '<body style="background-color: '
-#     body+= bgcolor + ';">'
-#     body+= '<h1>Hello ' + name + '</h1>'
-#     body+= '<br><a href="dynaform.py">Try Again</a>'
-#     html = make_html('Form Result', body)
-#     print(html)
-# #if no form data, return the form html instead of result
