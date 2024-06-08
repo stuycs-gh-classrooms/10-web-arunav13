@@ -1,6 +1,9 @@
 #!/usr/bin/python
-<link href="fractals.css" rel="stylesheet">
 print('Content-type: text/html\n')
+<html>
+<head>
+  <link href="mystyle.css" rel="stylesheet">
+</head>
 
 import cgitb #
 cgitb.enable() #These 2 lines will allow error messages to appear on a web page in the browser
