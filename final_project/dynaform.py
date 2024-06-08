@@ -1,4 +1,5 @@
 #!/usr/bin/python
+<link href="fractals.css" rel="stylesheet">
 print('Content-type: text/html\n')
 
 import cgitb #
