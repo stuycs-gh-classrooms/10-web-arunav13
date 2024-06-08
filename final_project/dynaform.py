@@ -71,29 +71,29 @@ question_bank = {
     '1abba' : ['Game Over' , 'Play Again']
 }
 
-images = { '1': image0.webp,
-  '1a': image1.jpg,
-  '1b': image2.webp,
-  '1aa': image1.jpg,
-  '1ab': image2.webp,
-  '1aba': image3.jpg,
-  '1aab': image2.webp,
-  '1aaa': image3.jpg,
-  '1abb': image4.jpg,
-  '1ba' : image3.jpg,
-  '1aaba': image3.jpg,
-  '1bb': image4.jpg,
-  '1aabb': image4.jpg,
-  '1bbb': image5.jpg,
-  '1aabbb': image5.jpg
-  '1bba': image3.jpg,
-  '1aabba': image3.jpg,
-  '1bbc': image6.jpg,
-  '1aabbc': image6.jpg,
-  '1abba': image3.jpg
+images = { '1': 'image0.webp',
+  '1a': 'image1.jpg',
+  '1b': 'image2.webp',
+  '1aa': 'image1.jpg',
+  '1ab': 'image2.webp',
+  '1aba': 'image3.jpg',
+  '1aab': 'image2.webp',
+  '1aaa': 'image3.jpg',
+  '1abb': 'image4.jpg',
+  '1ba' : 'image3.jpg',
+  '1aaba': 'image3.jpg',
+  '1bb': 'image4.jpg',
+  '1aabb': 'image4.jpg',
+  '1bbb': 'image5.jpg',
+  '1aabbb': 'image5.jpg',
+  '1bba': 'image3.jpg',
+  '1aabba': 'image3.jpg',
+  '1bbc': 'image6.jpg',
+  '1aabbc': 'image6.jpg',
+  '1abba': 'image3.jpg'
 }
 
-body += '<body background=""><h1> Pick your own adventure! </h1>'
+body = '<body background=""><h1> Pick your own adventure! </h1>'
 
 data = cgi.FieldStorage()
 html = make_html('Pick your adventure')
@@ -102,13 +102,13 @@ if (len(data) == 0):
 else:
     question_num = data['question'].value
     choice_num = data['choice'].value
-    image_num = images[question_num]
     if question_num in ['1bba' , '1aabba' ,  '1aabbc', '1aabbb' , '1bbb' , '1ba' ,'1aaa' , '1aba' , '1aaba' , '1bbc' , '1abba'] and choice_num == 'a':
         question_num = '1'
     else:
         question_num += choice_num
 
-body_open = '<body background=' + image_num + '> <h1> Pick your own adventure! </h1>'
+image_num = images[question_num]
+body_open = '<body background="' + image_num + '"> <h1> Pick your own adventure! </h1>'
 html += body_open
 
 list = question_bank[question_num]
