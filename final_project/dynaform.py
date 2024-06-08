@@ -1,7 +1,7 @@
 #!/usr/bin/python
 print('Content-type: text/html\n')
-html += 'head'
-html += '<link href="mystyle.css" rel="stylesheet">'
+html += '<head>'
+html += '<link href="form.css" rel="stylesheet">'
 html += '</head>'
 print(html)
 
@@ -11,7 +11,7 @@ cgitb.enable() #These 2 lines will allow error messages to appear on a web page 
 import cgi
 
 def make_html(title, body):
-    html = """
+    html += """
     <!DOCTYPE html>
     <html lang="en">
 
