@@ -1,8 +1,9 @@
 #!/usr/bin/python
 print('Content-type: text/html\n')
-<head>
-  <link href="mystyle.css" rel="stylesheet">
-</head>
+html += 'head'
+html += '<link href="mystyle.css" rel="stylesheet">'
+html += '</head>'
+print(html)
 
 import cgitb #
 cgitb.enable() #These 2 lines will allow error messages to appear on a web page in the browser
