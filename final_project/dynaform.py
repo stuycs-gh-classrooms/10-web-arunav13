@@ -108,8 +108,9 @@ else:
         question_num += choice_num
 
 image_num = images[question_num]
-body_open = '<body background="' + image_num + '"> <h1> Pick your own adventure! </h1>'
+body_open = "<body style=\"background-image: url('images_finalproject/" + image_num + "'); background-repeat: no-repeat; background-size: cover; background-position: center;\">"
 html += body_open
+
 
 list = question_bank[question_num]
 question = list[0]
